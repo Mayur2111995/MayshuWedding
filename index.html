@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayur weds Ashwini | Wedding Invitation</title>
+  <meta name="description" content="You are invited to the wedding festivities of Mayur & Ashwini, 17-19 December 2026, Motel Ahilya Lawns, Shirpur.">
+  <meta property="og:title" content="Mayur weds Ashwini - Wedding Invitation">
+  <meta property="og:description" content="17-19 December 2026 | Motel Ahilya Lawns, Shirpur, Dhule">
+  <meta property="og:image" content="images/venue.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <script>try{if(localStorage.getItem('mayshuGuest')){document.body.classList.remove('locked');document.body.classList.add('ready');}}catch(e){}</script>
+
+  <!-- Welcome gate: collects guest name & mobile -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <form class="gate-box" id="gateForm" novalidate>
+      <p class="om">|| Shree Ganeshaya Namah ||</p>
+      <h2 id="gateTitle" class="gate-names"><span class="n1">Mayur</span> <span class="weds">weds</span> <span class="n2">Ashwini</span></h2>
+      <p class="gate-lead">Please enter your details to open the invitation.</p>
+
+      <label for="gName">Your name</label>
+      <input id="gName" name="name" type="text" autocomplete="name" placeholder="Full name" required>
+
+      <label for="gMobile">Mobile number</label>
+      <input id="gMobile" name="mobile" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" maxlength="14" required>
+
+      <label for="gGuests">Total guests coming (including you)</label>
+      <select id="gGuests" name="guests">
+        <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10+</option>
+      </select>
+
+      <p class="gate-error" id="gateError" role="alert"></p>
+      <button class="btn gate-btn" type="submit" id="gateBtn">Open Invitation</button>
+      <p class="gate-note">Your details are shared only with the hosts, to plan the celebrations.</p>
+    </form>
+  </div>
+
+  <audio id="bgm" src="audio/song.mp3" loop preload="none"></audio>
+  <button class="music" id="musicBtn" type="button" aria-label="Play or pause music" title="Music">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path id="musicIcon" fill="currentColor" d="M8 5v14l11-7z"/></svg>
+  </button>
+
+
+  <header class="hero">
+    <img class="floral floral-l" src="images/floral-left.jpg" alt="">
+    <img class="floral floral-r" src="images/floral-right.jpg" alt="">
+
+    <div class="hero-inner">
+      <p class="om">|| Shree Ganeshaya Namah ||</p>
+      <p class="lead">Together with our families we cordially invite you to celebrate the wedding festivities of</p>
+
+      <h1 class="names" aria-label="Mayur weds Ashwini">
+        <span class="n1">Mayur</span>
+        <span class="weds">weds</span>
+        <span class="n2">Ashwini</span>
+      </h1>
+
+      <p class="tagline">A beautiful journey of love, traditions and new beginnings</p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div><b id="d">--</b><span>Days</span></div>
+        <div><b id="h">--</b><span>Hours</span></div>
+        <div><b id="m">--</b><span>Minutes</span></div>
+        <div><b id="s">--</b><span>Seconds</span></div>
+      </div>
+      <p class="count-note" id="countNote">till the Vaidik Wedding, 19 December 2026</p>
+
+      <a class="scroll" href="#events">Wedding Celebrations</a>
+    </div>
+  </header>
+
+  <section class="couple" id="couple">
+    <h2 class="section-title">The Couple</h2>
+    <div class="divider"><i></i></div>
+    <div class="couple-grid">
+      <figure class="person">
+        <div class="arch" data-initial="M"><img src="images/groom.jpg" alt="Mayur" loading="lazy" onerror="this.remove()"></div>
+        <figcaption><span class="pname green">Mayur</span><span class="prole">The Groom</span></figcaption>
+      </figure>
+      <div class="heart" aria-hidden="true">&amp;</div>
+      <figure class="person">
+        <div class="arch" data-initial="A"><img src="images/bride.jpg" alt="Ashwini" loading="lazy" onerror="this.remove()"></div>
+        <figcaption><span class="pname maroon">Ashwini</span><span class="prole">The Bride</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <main id="events" class="events">
+    <h2 class="section-title">Wedding Celebrations</h2>
+    <div class="divider"><i></i></div>
+
+    <section class="day">
+      <div class="day-head"><span class="num">17</span><span class="meta">December 2026<br>Thursday</span></div>
+      <div class="cards">
+        <article class="card">
+          <img src="images/mehndi.jpg" alt="Mehndi" loading="lazy">
+          <h3 class="green">Mehndi</h3>
+          <p class="time">11:30 AM</p>
+        </article>
+        <article class="card">
+          <img src="images/sangeet.jpg" alt="Sangeet" loading="lazy">
+          <h3>Sangeet</h3>
+          <p class="time">08:30 PM</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="day">
+      <div class="day-head"><span class="num">18</span><span class="meta">December 2026<br>Friday</span></div>
+      <div class="cards">
+        <article class="card">
+          <img src="images/groom-haldi.jpg" alt="Groom Haldi" loading="lazy">
+          <h3>Groom Haldi</h3>
+          <p class="time">10:30 AM</p>
+        </article>
+        <article class="card">
+          <img src="images/bride-groom-haldi.jpg" alt="Bride and Groom Haldi" loading="lazy">
+          <h3>Bride &amp; Groom Haldi</h3>
+          <p class="time">05:30 PM</p>
+        </article>
+        <article class="card">
+          <img src="images/dj-night.jpg" alt="DJ Night Party" loading="lazy">
+          <h3>DJ Night Party</h3>
+          <p class="time">07:30 PM to 10:30 PM</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="day">
+      <div class="day-head"><span class="num">19</span><span class="meta">December 2026<br>Saturday</span></div>
+      <div class="cards">
+        <article class="card feature">
+          <img src="images/vaidik.jpg" alt="Vaidik Wedding" loading="lazy">
+          <h3>Vaidik Wedding</h3>
+          <p class="time">12:46 PM</p>
+        </article>
+        <article class="card feature">
+          <img src="images/reception.jpg" alt="Reception Wedding" loading="lazy">
+          <h3>Reception</h3>
+          <p class="time">07:45 PM</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="venue">
+    <div class="venue-text">
+      <p class="chip">Venue</p>
+      <h2>Motel Ahilya Lawns</h2>
+      <p class="city">Shirpur, Dhule</p>
+      <address>
+        Behind MLA Residence / Near Malhar Nagar,<br>
+        New Bypass Road, Varvade / Karvand,<br>
+        Shirpur, District Dhule, Maharashtra 425405
+      </address>
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Motel+Ahilya+Lawns+Shirpur+Dhule">Open in Google Maps</a>
+    </div>
+    <img class="venue-img" src="images/venue.jpg" alt="Motel Ahilya Lawns decorated for the wedding" loading="lazy">
+  </section>
+
+  <footer>
+    <p class="script">With love &amp; blessings</p>
+    <p>Mayur &amp; Ashwini and Families</p>
+    <p class="small">We look forward to celebrating with you.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
