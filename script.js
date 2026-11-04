@@ -1,6 +1,6 @@
-// Countdown to Vaidik Wedding: 19 Dec 2026, 12:46 PM IST
+// Countdown to Vaidik Wedding: 19 Dec 2026, 08:33 PM IST
 (function () {
-  var target = new Date('2026-12-19T12:46:00+05:30').getTime();
+  var target = new Date('2026-12-19T08:33:00+05:30').getTime();
   var el = {
     d: document.getElementById('d'),
     h: document.getElementById('h'),
